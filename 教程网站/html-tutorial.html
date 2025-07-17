@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML教程</title>
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/tutorial.css">
+</head>
+
+<body>
+    <!-- 导航栏（同首页） -->
+    <nav class="navbar">...</nav>
+
+    <!-- 教程内容 -->
+    <div class="container">
+        <h1>HTML教程</h1>
+        <div class="tutorial-layout">
+            <!-- 章节列表 -->
+            <div class="chapter-list">
+                <h3>章节列表</h3>
+                <ul>
+                    <li><a href="#chapter-1">1. HTML基础结构</a></li>
+                    <li><a href="#chapter-2">2. 常用标签（必学）</a></li>
+                    <li><a href="#chapter-3">3. 语义化标签（推荐）</a></li>
+                    <li><a href="#chapter-4">4. 表单与表格（常用）</a></li>
+                    <li><a href="#chapter-5">5. 多媒体标签（不常用但有用）</a></li>
+                </ul>
+            </div>
+
+            <!-- 内容区域 -->
+            <div class="content-area">
+                <!-- 章节1：HTML基础结构 -->
+                <section id="chapter-1">
+                    <h2>1. HTML基础结构</h2>
+                    <p>HTML文档的基本结构包括以下部分：</p>
+                    <div class="code-block">
+                        &lt;!DOCTYPE html&gt; <!-- 声明HTML5文档 -->
+                        &lt;html lang="zh-CN"&gt; <!-- 根标签，指定语言为中文 -->
+                        &lt;head&gt; <!-- 头部：包含元信息 -->
+                        &lt;meta charset="UTF-8"&gt; <!-- 字符编码（必写） -->
+                        &lt;title&gt;页面标题&lt;/title&gt; <!-- 浏览器标签页标题 -->
+                        &lt;/head&gt;
+                        &lt;body&gt; <!-- 主体：页面可见内容 -->
+                        &lt;!-- 页面内容 -->
+                        &lt;/body&gt;
+                        &lt;/html&gt;
+                    </div>
+                    <p>说明：</p>
+                    <ul>
+                        <li><code>&lt;!DOCTYPE html&gt;</code>：告诉浏览器这是HTML5文档，必须放在第一行</li>
+                        <li><code>&lt;html lang="zh-CN"&gt;</code>：根标签，所有内容都包裹在其中，<code>lang</code>属性指定语言（有利于SEO）</li>
+                        <li><code>&lt;head&gt;</code>：包含元信息（如字符编码、标题），不显示在页面上</li>
+                        <li><code>&lt;body&gt;</code>：包含页面可见内容（如标题、段落、图片）</li>
+                    </ul>
+                </section>
+
+                <!-- 章节2：常用标签（必学） -->
+                <section id="chapter-2">
+                    <h2>2. 常用标签（必学）</h2>
+                    <p>以下是HTML中最常用的标签，必须掌握：</p>
+
+                    <!-- 子章节：标题标签 -->
+                    <h3>2.1 标题标签（<code>&lt;h1&gt;-&lt;h6&gt;</code>）</h3>
+                    <div class="code-block">
+                        &lt;h1&gt;一级标题（最大）&lt;/h1&gt;
+                        &lt;h2&gt;二级标题&lt;/h2&gt;
+                        &lt;h3&gt;三级标题&lt;/h3&gt;
+                    </div>
+                    <div class="example-preview">
+                        <h3>效果预览：</h3>
+                        <div class="preview-content">
+                            <h1 style="font-size: 24px;">一级标题（最大）</h1>
+                            <h2 style="font-size: 20px;">二级标题</h2>
+                            <h3 style="font-size: 16px;">三级标题</h3>
+                        </div>
+                    </div>
+                    <p>说明：<code>&lt;h1&gt;</code>是页面主标题（一个页面建议只写1个），<code>&lt;h6&gt;</code>是最小的标题，字体大小依次递减。</p>
+
+                    <!-- 子章节：段落标签（<code>&lt;p&gt;</code>） -->
+                    <h3>2.2 段落标签（<code>&lt;p&gt;</code>）</h3>
+                    <div class="code-block">
+                        &lt;p&gt;这是一个段落，用来写正文内容。&lt;/p&gt;
+                        &lt;p&gt;段落之间会有默认的间距，让文字更易读。&lt;/p&gt;
+                    </div>
+                    <div class="example-preview">
+                        <h3>效果预览：</h3>
+                        <div class="preview-content">
+                            <p>这是一个段落，用来写正文内容。</p>
+                            <p>段落之间会有默认的间距，让文字更易读。</p>
+                        </div>
+                    </div>
+                    <p>说明：<code>&lt;p&gt;</code>标签用来包裹正文段落，浏览器会自动在段落前后添加空白。</p>
+
+                    <!-- 更多常用标签（<a>、<img>、<ul>、<ol>等）... -->
+                </section>
+
+                <!-- 章节3：语义化标签（推荐） -->
+                <section id="chapter-3">
+                    <h2>3. 语义化标签（推荐）</h2>
+                    <p>语义化标签是HTML5新增的，用来描述内容的含义（如<code>&lt;article&gt;</code>表示文章、<code>&lt;nav&gt;</code>表示导航），有利于SEO和屏幕阅读器。
+                    </p>
+                    <div class="code-block">
+                        &lt;header&gt; <!-- 页头：包含logo、导航 -->
+                        &lt;div class="logo"&gt;前端教程&lt;/div&gt;
+                        &lt;nav&gt; <!-- 导航 -->
+                        &lt;ul&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;首页&lt;/a&gt;&lt;/li&gt;
+                        &lt;li&gt;&lt;a href="#"&gt;教程&lt;/a&gt;&lt;/li&gt;
+                        &lt;/ul&gt;
+                        &lt;/nav&gt;
+                        &lt;/header&gt;
+                        &lt;article&gt; <!-- 文章：包含独立内容 -->
+                        &lt;h2&gt;文章标题&lt;/h2&gt;
+                        &lt;p&gt;文章内容...&lt;/p&gt;
+                        &lt;/article&gt;
+                        &lt;footer&gt; <!-- 页脚：包含版权信息 -->
+                        &lt;p&gt;&copy; 2024 前端教程. 所有权利保留.&lt;/p&gt;
+                        &lt;/footer&gt;
+                    </div>
+                    <p>说明：语义化标签不会改变页面样式，但能让代码更易读、更符合标准。</p>
+                </section>
+
+                <!-- 更多章节（表单与表格、多媒体标签）... -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">...</footer>
+
+    <script src="assets/js/common.js"></script>
+    <script src="assets/js/tutorial.js"></script>
+</body>
+
+</html>
